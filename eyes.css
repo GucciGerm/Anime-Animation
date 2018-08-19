@@ -1,0 +1,85 @@
+/*
+	Dark Blue: #0d3b66
+	Blonde: #faf0ca
+	Yellow: #f4d35e
+	Orange: #ee964b
+	Angry Orange: #f95738
+*/
+
+:root {
+	--Dark_Blue: #0d3b66;
+	--Blonde: #faf0ca;
+	--Yellow: #f4d35e;
+	--Orange: #ee964b;
+	--Angry_Orange: #f95738;
+}
+
+body {
+	background: var(--Dark_Blue);
+}
+
+.eyes {
+	height: 150px;
+	width: 400px;
+	border: 1px solid var(--Blonde);
+	background: url("./flirty.png");
+	background-position: top left;
+	background-size: 800px;
+	background-repeat: no-repeat;
+
+}
+
+@keyframes blink {
+	100% {}
+	70% {
+		background: url("./flirty.png");
+		background-position: top left;
+		background-size: 800px;
+	}
+
+	60% {
+		background: url("./finakky closed.png");
+		background-position: top left;
+		background-size: 800px;
+	}
+
+	59% {
+		background: url("./flirty.png");
+		background-position: top left;
+		background-size: 800px;		
+	}
+
+	55% {
+
+		background: url("./flirty.png");
+		background-position: top left;
+		background-size: 800px;
+	}
+	
+	24% {}
+	
+	0% {}
+}
+
+@keyframes poke {
+	0% {
+		background: url("./finakky closed.png");
+		background-position: top left;
+		background-size: 800px;
+	}
+
+	100% {
+		background: url("./finakky closed.png");
+		background-position: top left;
+		background-size: 800px;
+	}
+}
+
+.eyes {
+	animation: blink 4s ease-in-out infinite;
+}
+
+.eyes:hover {
+	animation: poke 1s ease-in-out infinite;
+	animation-delay: 0.05s;
+}
